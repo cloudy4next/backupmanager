@@ -28,9 +28,15 @@ class BackupManagerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // use the vendor configuration file as fallback
+        $this->mergeConfigFrom(
+            __DIR__.'/config/backup.php',
+            'backpack.backupmanager'
+        );
+
         // LOAD THE VIEWS
         // - first the published/overwritten views (in case they have any changes)
-        $customViewsFolder = resource_path('views/vendor/cloudy4next/backupmanager');
+        $customViewsFolder = resource_path('views/vendor/backpack/backupmanager');
 
         if (file_exists($customViewsFolder)) {
             $this->loadViewsFrom($customViewsFolder, 'backupmanager');
@@ -39,10 +45,9 @@ class BackupManagerServiceProvider extends ServiceProvider
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'backupmanager');
 
         // publish config file
-        $this->publishes([__DIR__.'/config/backupmanager.php' => config_path('backpack/backupmanager.php')], 'backup-config');
-
+        $this->publishes([__DIR__.'/config/backup.php' => config_path('backup.php')], 'config');
         // publish lang files
-        $this->publishes([__DIR__.'/resources/lang' => app()->langPath().'/vendor/backpack'], 'lang');
+        $this->publishes([__DIR__.'/resources/lang' => resource_path('lang/vendor/backpack')], 'lang');
         // publish the views
         $this->publishes([__DIR__.'/resources/views' => resource_path('views/vendor/backpack/backupmanager')], 'views');
     }
@@ -75,5 +80,10 @@ class BackupManagerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->setupRoutes($this->app->router);
+
+        // use this if your package has a config file
+        config([
+            'config/backup.php',
+        ]);
     }
 }

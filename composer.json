@@ -23,12 +23,20 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "spatie/laravel-backup": "^8.0|^7.0|^6.1",
         "cloudy4next/crud": "^2.0.0",
-        "spatie/laravel-backup": "^8.0"
+
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:cloudy4next/crud.git"
+        },
+
+    ],
     "require-dev": {
-        "phpunit/phpunit": "^9.0||^7.0",
-        "scrutinizer/ocular": "~1.7|~1.1"
+        "phpunit/phpunit" : "^9.0||^7.0",
+        "scrutinizer/ocular": "~1.1"
     },
     "autoload": {
         "psr-4": {

@@ -12,8 +12,7 @@ return [
     |
     */
 
-    'backup'                         => 'Copie de siguranță',
-    'backups'                        => 'Copii de siguranță',
+    'backup'                         => 'Copii de siguranță',
     'create_a_new_backup'            => 'Creează o nouă copie de siguranță',
     'existing_backups'               => 'Copii existente',
     'date'                           => 'Data',

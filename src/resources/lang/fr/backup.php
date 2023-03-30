@@ -13,7 +13,6 @@ return [
     */
 
     'backup'                         => 'Sauvegarde',
-    'backups'                        => 'Sauvegardes',
     'create_a_new_backup'            => 'Créer une nouvelle sauvegarde',
     'existing_backups'               => 'Sauvegardes existantes',
     'date'                           => 'Date',
