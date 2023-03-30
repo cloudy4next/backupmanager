@@ -24,7 +24,7 @@
     "prefer-stable": true,
     "require": {
         "spatie/laravel-backup": "^8.0|^7.0|^6.1",
-        "cloudy4next/crud": "^2.0.0",
+        "cloudy4next/crud": "^2.0.0"
 
     },
     "repositories": [
