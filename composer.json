@@ -31,7 +31,7 @@
         {
             "type": "vcs",
             "url": "git@github.com:cloudy4next/crud.git"
-        },
+        }
 
     ],
     "require-dev": {
