@@ -1,5 +1,5 @@
 {
-    "name": "backpack/backupmanager",
+    "name": "cloudy4next/backupmanager",
     "description": "Admin interface for managing backups in Backpack, on Laravel 5.2+",
     "keywords": [
         "dick",
